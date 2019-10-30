@@ -44,7 +44,8 @@ public class CheckLiteTest {
         return Arrays.asList(new Object [][] {
                                                 {"", 0},
                                                 {"a",-1},
-                                                {"aA",50}, //hmm - let's try this. This invalidates the
+                                              //  {"aA",50}, //hmm - let's try this. This invalidates the
+                                                {"aA",-1}, //It should "Fail-Hard"
                                                 {"-", -1},
                                                 { "AAA" , 130},
                                                 { "AA" , 100},
