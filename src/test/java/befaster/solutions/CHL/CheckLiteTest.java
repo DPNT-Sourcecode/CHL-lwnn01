@@ -42,10 +42,10 @@ public class CheckLiteTest {
     @Parameterized.Parameters
     public static Collection input() {
         return Arrays.asList(new Object [][] {
-                                                { "AAA" , 130},
                                                 {"", 0},
                                                 {"a",-1},
                                                 {"-", -1},
+                                                { "AAA" , 130},
                                                 { "AA" , 100},
                                                 {"ABC", 100},
                                                 {"ABCDCBAABCABBAAA",505}
@@ -59,6 +59,7 @@ public class CheckLiteTest {
         assertThat(checkliteSolution.checklite(sku), equalTo(result));
     }
 }
+
 
 
 

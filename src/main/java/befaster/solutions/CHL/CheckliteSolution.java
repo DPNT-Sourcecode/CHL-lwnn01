@@ -18,12 +18,12 @@ public class CheckliteSolution {
     }
 
     public Integer checklite(String skus) {
-        if (MapUtils.isEmpty(this.inventory)) return 0;
+        if (MapUtils.isEmpty(this.inventory)) return -1;
 
         //Step 1 - parse SKUs into occurrence Map
         Map<String, Integer> basket = parseBasket(skus);
         if(MapUtils.isEmpty(basket)) {
-            return -1;
+            return 0;
         }
         //Step 2 - calculate cost
         return totaliseBasket(basket);
@@ -79,6 +79,7 @@ public class CheckliteSolution {
         this.inventory.put(skuD.getId(), skuD);
     }
 }
+
 
 
 
