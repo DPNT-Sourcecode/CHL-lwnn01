@@ -13,4 +13,3 @@ public class SpecialOffers {
     private Map<String,String> offers = new HashMap<>();
 
 }
-
