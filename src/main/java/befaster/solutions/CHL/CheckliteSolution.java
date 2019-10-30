@@ -13,6 +13,11 @@ public class CheckliteSolution {
 
     public Integer checklite(String skus) {
         //Step 1 - parse SKUs into occurrence Map
+        Map<String, Integer> basket = parseBasket(skus);
+        if(basket.isEmpty()) {
+            return -1;
+        }
+        //Step 3 - calculate cost
 
 
     }
@@ -20,11 +25,16 @@ public class CheckliteSolution {
 
     private Map<String, Integer> parseBasket(String skus){
         Map<String, Integer> skuCount = new HashMap<>();
-        for 
-
-
+        for (int i = 0; i < skus.length(); i++){
+            String sku = String.valueOf(skus.charAt(i));
+            if (!skuCount.containsKey(sku)){
+                skuCount.put(sku, 1);
+            } else {
+                skuCount.put(sku, Integer.valueOf(skuCount.get(sku) + 1));
+            }
+        }
+        return skuCount;
     }
-
-
 }
+
 
