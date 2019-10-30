@@ -71,12 +71,13 @@ public class CheckliteSolution {
         this.inventory = new HashMap<>();
         StockKeepingUnit skuA = new StockKeepingUnit("A", 50,  new SpecialOffer(3, 130));
         StockKeepingUnit skuB = new StockKeepingUnit("B", 30,  new SpecialOffer(2, 45));
-        StockKeepingUnit skuC = new StockKeepingUnit("C", 50,  null);
-        StockKeepingUnit skuD = new StockKeepingUnit("D", 50,  null);
+        StockKeepingUnit skuC = new StockKeepingUnit("C", 20,  null);
+        StockKeepingUnit skuD = new StockKeepingUnit("D", 15,  null);
         this.inventory.put(skuA.getId(), skuA);
         this.inventory.put(skuB.getId(), skuB);
         this.inventory.put(skuC.getId(), skuC);
         this.inventory.put(skuD.getId(), skuD);
     }
 }
+
 
