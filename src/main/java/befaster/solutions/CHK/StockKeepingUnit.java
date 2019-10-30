@@ -1,15 +1,68 @@
 package befaster.solutions.CHK;
 
+import com.sun.istack.internal.Nullable;
+
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Class to model special offers
  */
-public class SpecialOffers {
+public class StockKeepingUnit {
+
     /**
-
+     * The unique identifier for the Stock Item (e.g. A)
      */
-    private Map<String,String> offers = new HashMap<>();
+    private final String id;
 
+    /**
+     * The cost of individual units
+     */
+    private final Integer cost;
+
+    /**
+        Any Special offers (if any)
+     */
+    @Nullable
+    private Map<Integer,Integer> offers;
+
+    public StockKeepingUnit(String id, Integer cost, Map<Integer, Integer> offers) {
+        this.id = id;
+        this.cost = cost;
+        this.offers = (offers == null ? new HashMap<>() : offers);
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public Integer getCost() {
+        return cost;
+    }
+
+    public Map<Integer, Integer> getOffers() {
+        return offers;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+
+        if (!(o instanceof StockKeepingUnit)) return false;
+
+        StockKeepingUnit that = (StockKeepingUnit) o;
+
+        return new org.apache.commons.lang3.builder.EqualsBuilder()
+                .append(getId(), that.getId())
+                .append(getCost(), that.getCost())
+                .append(getOffers(), that.getOffers())
+                .isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new org.apache.commons.lang3.builder.HashCodeBuilder(17, 37)
+                .append(getId())
+                .toHashCode();
+    }
 }
