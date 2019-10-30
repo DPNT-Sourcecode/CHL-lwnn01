@@ -20,10 +20,7 @@ public class HelloWorldSolution {
 
     @Test
     public void sayHello2() {
-        assertThat(helloSolution.hello(""), equalTo("Hello,!"));
-        assertThat(helloSolution.hello(null), equalTo("Hello,!"));
+        assertThat(helloSolution.hello(""), equalTo("Hello, !"));
+        assertThat(helloSolution.hello(null), equalTo("Hello, !"));
     }
 }
-
-
-

@@ -8,7 +8,3 @@ public class HelloSolution {
         return String.format("Hello, %s!", Strings.isNullOrEmpty(friendName) ? "" : friendName);
     }
 }
-
-
-
-
