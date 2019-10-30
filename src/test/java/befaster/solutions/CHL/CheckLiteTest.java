@@ -45,7 +45,7 @@ public class CheckLiteTest {
                                                 { "AAA" , 130},
                                                 { "AA" , 100},
                                                 {"ABC", 100},
-                                                {"ABCDCBAABCABBAAA",470}
+                                                {"ABCDCBAABCABBAAA",505}
                                              });
 
     }
@@ -56,5 +56,6 @@ public class CheckLiteTest {
         assertThat(checkliteSolution.checklite(sku), equalTo(result));
     }
 }
+
 
 
