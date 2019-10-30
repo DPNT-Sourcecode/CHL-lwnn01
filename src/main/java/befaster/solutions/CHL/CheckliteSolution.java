@@ -1,6 +1,8 @@
 package befaster.solutions.CHL;
 
 
+import org.apache.commons.collections.CollectionUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +16,7 @@ public class CheckliteSolution {
     public Integer checklite(String skus) {
         //Step 1 - parse SKUs into occurrence Map
         Map<String, Integer> basket = parseBasket(skus);
-        if(basket.isEmpty()) {
+        if(CollectionUtils.basket.isEmpty()) {
             return -1;
         }
         //Step 2 - calculate cost
@@ -52,3 +54,4 @@ public class CheckliteSolution {
     }
 
 }
+
