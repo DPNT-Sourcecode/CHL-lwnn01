@@ -43,7 +43,7 @@ public class CheckliteSolution {
     }
 
     private Integer totaliseBasket(Map<String, Integer> basket){
-        Integer overallTotal = -1;
+        Integer overallTotal = 0;
 
         for(Map.Entry<String, Integer> entry : basket.entrySet()){
             if(inventory.containsKey(entry.getKey())){
@@ -79,6 +79,7 @@ public class CheckliteSolution {
         this.inventory.put(skuD.getId(), skuD);
     }
 }
+
 
 
 
