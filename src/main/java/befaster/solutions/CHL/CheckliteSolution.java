@@ -17,9 +17,10 @@ public class CheckliteSolution {
         if(basket.isEmpty()) {
             return -1;
         }
-        //Step 3 - calculate cost
+        //Step 2 - calculate cost
 
 
+        return 0;
     }
 
 
@@ -35,6 +36,19 @@ public class CheckliteSolution {
         }
         return skuCount;
     }
+
+
+    private Integer totaliseBasket(Map<String, Integer>){
+
+
+        Integer overallTotal = 0;
+
+
+
+
+
+
+        return 0;
+    }
+
 }
-
-

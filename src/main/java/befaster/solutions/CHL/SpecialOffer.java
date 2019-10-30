@@ -17,4 +17,3 @@ public class SpecialOffer {
         return bulkCost;
     }
 }
-
