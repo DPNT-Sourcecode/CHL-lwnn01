@@ -1,6 +1,7 @@
 package befaster.solutions.CHL;
 
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class CheckliteSolution {
@@ -11,9 +12,19 @@ public class CheckliteSolution {
     }
 
     public Integer checklite(String skus) {
-        //Have no idea how this SKU is defined. Run tests to see inputs
-        // A shopping basket is not a SKU
+        //Step 1 - parse SKUs into occurrence Map
 
-        return 0;
+
     }
+
+
+    private Map<String, Integer> parseBasket(String skus){
+        Map<String, Integer> skuCount = new HashMap<>();
+        for 
+
+
+    }
+
+
 }
+
