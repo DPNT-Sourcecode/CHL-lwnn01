@@ -1,13 +1,20 @@
 package befaster.solutions.CHL;
 
 import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-
+@RunWith(Parameterized.class)
 public class CheckLiteTest {
     private CheckliteSolution checkliteSolution;
+    private String sku;
+    private Integer result;
 
     @Before
     public void setUp() {
@@ -25,4 +32,25 @@ public class CheckLiteTest {
         checkliteSolution = new CheckliteSolution(inventory);
     }
 
+    public CheckLiteTest(String sku, Integer result) {
+        this.sku = sku;
+        this.result = result;
+    }
+
+    @Parameterized.Parameters
+    public static Collection input() {
+        return Arrays.asList(new Object [][] {
+                                                { "AAA" , 130},
+                                                { "AA" , 100}
+                                             });
+
+    }
+
+
+    @Test
+    public void getCost(){
+
+    }
+
 }
+

@@ -13,7 +13,7 @@ public class CheckliteSolution {
     }
 
     public Integer checklite(String skus) {
-        if (MapUtils.isEmpty(this.inventory)) return -1;;
+        if (MapUtils.isEmpty(this.inventory)) return -1;
 
         //Step 1 - parse SKUs into occurrence Map
         Map<String, Integer> basket = parseBasket(skus);
@@ -25,7 +25,6 @@ public class CheckliteSolution {
 
         return 0;
     }
-
 
     private Map<String, Integer> parseBasket(String skus){
         Map<String, Integer> skuCount = new HashMap<>();
@@ -40,16 +39,29 @@ public class CheckliteSolution {
         return skuCount;
     }
 
-
     private Integer totaliseBasket(Map<String, Integer> basket){
-
         Integer overallTotal = 0;
 
         for(Map.Entry<String, Integer> entry : basket.entrySet()){
-            if
+            if(inventory.containsKey(entry.getKey())){
+                overallTotal += getCost(entry.getValue(), inventory.get(entry.getKey()));
+            }
         }
-
-        return 0;
+        return overallTotal;
     }
 
+    private Integer getCost(Integer quantity, StockKeepingUnit sku){
+        if(quantity == null || quantity.equals(0)) return 0;
+
+        if (sku.getOffers() == null){
+            return quantity * sku.getCost();
+        } else {
+            SpecialOffer offer = sku.getOffers();
+            int cost = (quantity / offer.getQuantity()) * offer.getBulkCost();
+            //Use Modulus to determine cost of units at normal price
+            cost += (quantity % offer.getQuantity()) * sku.getCost();
+            return cost;
+        }
+    }
 }
+
