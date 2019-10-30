@@ -44,6 +44,7 @@ public class CheckLiteTest {
         return Arrays.asList(new Object [][] {
                                                 {"", 0},
                                                 {"a",-1},
+                                                {"aA",50}, //hmm - let's try this
                                                 {"-", -1},
                                                 { "AAA" , 130},
                                                 { "AA" , 100},
@@ -59,6 +60,7 @@ public class CheckLiteTest {
         assertThat(checkliteSolution.checklite(sku), equalTo(result));
     }
 }
+
 
 
 
