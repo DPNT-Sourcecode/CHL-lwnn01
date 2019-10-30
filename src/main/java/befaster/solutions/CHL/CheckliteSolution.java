@@ -10,10 +10,10 @@ public class CheckliteSolution {
 
     public CheckliteSolution(Map<String, StockKeepingUnit> inventory){
         if (inventory == null) {
-
+            intialiase();
+        } else {
+            this.inventory = inventory;
         }
-
-        this.inventory = inventory;
 
     }
 
@@ -68,6 +68,7 @@ public class CheckliteSolution {
     }
 
     private void intialiase(){
+        this.inventory = new HashMap<>();
         StockKeepingUnit skuA = new StockKeepingUnit("A", 50,  new SpecialOffer(3, 130));
         StockKeepingUnit skuB = new StockKeepingUnit("B", 30,  new SpecialOffer(2, 45));
         StockKeepingUnit skuC = new StockKeepingUnit("A", 50,  null);
@@ -78,5 +79,6 @@ public class CheckliteSolution {
         this.inventory.put(skuD.getId(), skuD);
     }
 }
+
 
 
