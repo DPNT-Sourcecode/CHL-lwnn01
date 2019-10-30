@@ -48,7 +48,7 @@ public class SendCommandToServer {
      *        * You can use your preferred libraries.
      *        * You can use your own test framework.
      *        * You can change the file structure.
-     *        * Anything really, provided that this file stays runnable.
+     *        * Anything really, provided that this file stays runnable.deploy
      *
      **/
     public static void main(String[] args) throws ConfigNotFoundException {
@@ -72,3 +72,4 @@ public class SendCommandToServer {
     }
 
 }
+

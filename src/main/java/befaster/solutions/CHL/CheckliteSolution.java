@@ -18,7 +18,7 @@ public class CheckliteSolution {
     }
 
     public Integer checklite(String skus) {
-        if (MapUtils.isEmpty(this.inventory)) return -1;
+        if (MapUtils.isEmpty(this.inventory)) return 0;
 
         //Step 1 - parse SKUs into occurrence Map
         Map<String, Integer> basket = parseBasket(skus);
@@ -43,7 +43,7 @@ public class CheckliteSolution {
     }
 
     private Integer totaliseBasket(Map<String, Integer> basket){
-        Integer overallTotal = 0;
+        Integer overallTotal = -1;
 
         for(Map.Entry<String, Integer> entry : basket.entrySet()){
             if(inventory.containsKey(entry.getKey())){
@@ -79,5 +79,6 @@ public class CheckliteSolution {
         this.inventory.put(skuD.getId(), skuD);
     }
 }
+
 
 
