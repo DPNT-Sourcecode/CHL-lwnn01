@@ -1,6 +1,8 @@
 package befaster.solutions.CHK;
 
 import com.sun.istack.internal.Nullable;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -52,7 +54,7 @@ public class StockKeepingUnit {
 
         StockKeepingUnit that = (StockKeepingUnit) o;
 
-        return new org.apache.commons.lang3.builder.EqualsBuilder()
+        return new EqualsBuilder()
                 .append(getId(), that.getId())
                 .append(getCost(), that.getCost())
                 .append(getOffers(), that.getOffers())
@@ -61,8 +63,18 @@ public class StockKeepingUnit {
 
     @Override
     public int hashCode() {
-        return new org.apache.commons.lang3.builder.HashCodeBuilder(17, 37)
+        return new HashCodeBuilder(17, 37)
                 .append(getId())
                 .toHashCode();
     }
+
+    @Override
+    public String toString() {
+        return "StockKeepingUnit{" +
+                "id='" + id + '\'' +
+                ", cost=" + cost +
+                ", offers=" + offers +
+                '}';
+    }
 }
+

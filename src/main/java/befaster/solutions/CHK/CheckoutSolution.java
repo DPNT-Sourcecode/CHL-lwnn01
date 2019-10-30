@@ -7,7 +7,13 @@ public class CheckoutSolution {
 
 
 
+
     public Integer checkout(String skus) {
-        throw new SolutionNotImplementedException();
+        //Have no idea how this SKU is defined. Run tests to see inputs
+        // A shopping basket is not a SKU 
+
+
+        return 0;
     }
 }
+
