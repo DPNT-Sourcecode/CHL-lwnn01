@@ -8,4 +8,3 @@ i.e. is it a fail-hard scenario?
 For example 2) "aA" should it return 50 or -1?? Ignore it or fail hard
 
 OK - running the tests against server have proven it is fail hard (that requirement was not apparent)
-

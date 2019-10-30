@@ -82,4 +82,3 @@ public class CheckliteSolution {
         this.inventory.put(skuD.getId(), skuD);
     }
 }
-
