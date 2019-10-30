@@ -9,7 +9,12 @@ public class CheckliteSolution {
     Map<String, StockKeepingUnit> inventory;
 
     public CheckliteSolution(Map<String, StockKeepingUnit> inventory){
+        if (inventory == null) {
+
+        }
+
         this.inventory = inventory;
+
     }
 
     public Integer checklite(String skus) {
@@ -21,9 +26,7 @@ public class CheckliteSolution {
             return -1;
         }
         //Step 2 - calculate cost
-
-
-        return 0;
+        return totaliseBasket(basket);
     }
 
     private Map<String, Integer> parseBasket(String skus){
@@ -63,5 +66,17 @@ public class CheckliteSolution {
             return cost;
         }
     }
+
+    private void intialiase(){
+        StockKeepingUnit skuA = new StockKeepingUnit("A", 50,  new SpecialOffer(3, 130));
+        StockKeepingUnit skuB = new StockKeepingUnit("B", 30,  new SpecialOffer(2, 45));
+        StockKeepingUnit skuC = new StockKeepingUnit("A", 50,  null);
+        StockKeepingUnit skuD = new StockKeepingUnit("A", 50,  null);
+        this.inventory.put(skuA.getId(), skuA);
+        this.inventory.put(skuB.getId(), skuB);
+        this.inventory.put(skuC.getId(), skuC);
+        this.inventory.put(skuD.getId(), skuD);
+    }
 }
+
 
