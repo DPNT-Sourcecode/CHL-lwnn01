@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 @RunWith(Parameterized.class)
 public class CheckLiteTest {
@@ -42,7 +44,8 @@ public class CheckLiteTest {
         return Arrays.asList(new Object [][] {
                                                 { "AAA" , 130},
                                                 { "AA" , 100},
-                                                {"ABC", 100}
+                                                {"ABC", 100},
+                                                {"ABCDCBAABCABBAAA",470}
                                              });
 
     }
@@ -50,9 +53,6 @@ public class CheckLiteTest {
 
     @Test
     public void getCost(){
-
+        assertThat(checkliteSolution.checklite(sku), equalTo(result));
     }
-
 }
-
-
