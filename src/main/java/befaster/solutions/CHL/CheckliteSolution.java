@@ -4,15 +4,13 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckliteSolution {
     public Integer checklite(String skus) {
-        throw new SolutionNotImplementedException();
+
+
+        //Have no idea how this SKU is defined. Run tests to see inputs
+        // A shopping basket is not a SKU
+
+
+        return 0;
     }
-
-
-
-
-
-
-
-
-
 }
+

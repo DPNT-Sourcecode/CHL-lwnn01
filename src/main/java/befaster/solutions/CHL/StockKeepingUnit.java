@@ -1,4 +1,4 @@
-package befaster.solutions.CHK;
+package befaster.solutions.CHL;
 
 import com.sun.istack.internal.Nullable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -77,4 +77,3 @@ public class StockKeepingUnit {
                 '}';
     }
 }
-
