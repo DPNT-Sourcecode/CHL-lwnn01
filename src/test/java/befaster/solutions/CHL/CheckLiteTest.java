@@ -41,7 +41,8 @@ public class CheckLiteTest {
     public static Collection input() {
         return Arrays.asList(new Object [][] {
                                                 { "AAA" , 130},
-                                                { "AA" , 100}
+                                                { "AA" , 100},
+                                                {"ABC", 100}
                                              });
 
     }
@@ -53,4 +54,5 @@ public class CheckLiteTest {
     }
 
 }
+
 
