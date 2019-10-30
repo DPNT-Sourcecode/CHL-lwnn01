@@ -26,12 +26,12 @@ public class StockKeepingUnit {
         Any Special offers (if any)
      */
     @Nullable
-    private Map<Integer,Integer> offers;
+    private SpecialOffer offers;
 
-    public StockKeepingUnit(String id, Integer cost, Map<Integer, Integer> offers) {
+    public StockKeepingUnit(String id, Integer cost, SpecialOffer offers) {
         this.id = id;
         this.cost = cost;
-        this.offers = (offers == null ? new HashMap<>() : offers);
+        this.offers = offers;
     }
 
     public String getId() {
@@ -42,7 +42,7 @@ public class StockKeepingUnit {
         return cost;
     }
 
-    public Map<Integer, Integer> getOffers() {
+    public SpecialOffer getOffers() {
         return offers;
     }
 
@@ -77,3 +77,4 @@ public class StockKeepingUnit {
                 '}';
     }
 }
+
