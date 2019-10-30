@@ -48,6 +48,9 @@ public class CheckliteSolution {
         for(Map.Entry<String, Integer> entry : basket.entrySet()){
             if(inventory.containsKey(entry.getKey())){
                 overallTotal += getCost(entry.getValue(), inventory.get(entry.getKey()));
+            } else {
+                //Fail - Hard
+                return -1;
             }
         }
         return overallTotal;
@@ -79,3 +82,4 @@ public class CheckliteSolution {
         this.inventory.put(skuD.getId(), skuD);
     }
 }
+
